@@ -12,6 +12,8 @@ type PageFiles = Record<string, () => Promise<DefaultComponent<unknown>>>;
 const pages = import.meta.glob('../../pages/**/*.tsx') as PageFiles;
 const layouts = handleRoutes(pages);
 
+console.log(layouts, 'routes');
+
 const newRoutes: RouteObject[] = [
   {
     path: "login",
